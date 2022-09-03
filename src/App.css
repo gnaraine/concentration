@@ -1,38 +1,115 @@
 .App {
+  max-width: 860px;
+  margin: 40px auto;
+}
+button {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  color: rgb(60, 60, 61);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.75em;
+}
+button:hover {
+  background: #fff242;
+  color: rgb(60, 60, 61);
+  border-radius: 6px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 40px;
+}
+
+.grid-container button {
+  grid-column: 1 / span 1;
+}
+.grid-container .turns {
+  grid-column: 7 / span 1;
+}
+
+.card-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card-grid-expert {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.congrats-hidden {
+  display: none;
+}
+.congrats {
+  display: block;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 7rem;
+}
+
+.difficultySelector {
+  grid-column: 2 / span 1;
+}
+
+.difficultySelector select {
+  color: rgb(60, 60, 61);
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: 0.75em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.difficultySelector select:hover {
+  background: #fff242;
+  color: rgb(60, 60, 61);
+  border-radius: 6px;
+}
+
+.difficultySelector option {
+  background: #fff;
+}
+
+.hint {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  align-items: center;
+  grid-column: 3 / span 2;
+}
+
+.hint p {
+  margin: 0;
+  padding: 0;
+}
+
+.hint input {
+  height: 25px;
+  width: 25px;
+}
+
+.startGame button {
+  font-size: 5rem;
+  margin-top: 20%;
+}
+
+.startGame button:hover {
+  font-size: 5rem;
+  background: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid-container .hiScore {
+  grid-column: 5 / span 2;
 }
